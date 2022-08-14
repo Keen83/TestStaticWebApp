@@ -7,8 +7,8 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      const { text } = await( await fetch(`/api/MyTestFunc`)).json();
-      setData(text);
+      const res = await( await fetch(`/api/MyTestFunc?name=Sasha&age=39`)).text();
+      setData(res);
     })();
   });
   
